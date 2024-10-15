@@ -9,6 +9,6 @@ app.get('/', (req: Request, res: Response) => {
     res.send('FundChain Backend server');
   });
   
-  app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
   });
