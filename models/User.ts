@@ -1,4 +1,3 @@
-import { isHexString } from "ethers";
 import mongoose from "../database/connect";
 
 const UserSchema=new mongoose.Schema({
@@ -14,9 +13,14 @@ const UserSchema=new mongoose.Schema({
     nonce:{
         type:Number,
         required:true
-    }
+    },
+    regions:[
+        {
+            type: Number,
+            required:true
+        }
+    ]
 })
 
 const User=mongoose.model('User',UserSchema);
-
 export default User;
